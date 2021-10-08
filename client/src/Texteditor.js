@@ -33,7 +33,7 @@ export default function TextEditor() {
 
 
     useEffect(() => {
-        const s = io('http://10.1.1.11:3001')
+        const s = io(`http://${process.env.REACT_APP_HOST}:${process.env.REACT_APP_PORT}`)
         setSocket(s)
 
         return () => {
